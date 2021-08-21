@@ -1,0 +1,140 @@
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+}
+
+.modal--no-js {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow: auto;
+  background: $grey-background;
+  opacity: 1;
+  visibility: visible;
+
+  .modal__button-close {
+    display: none;
+  }
+}
+
+.modal[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  background: rgba(29, 22, 19, 0.25);
+}
+
+.modal {
+  a {
+    text-decoration: none;
+  }
+}
+
+
+.modal h2 {
+  text-align: center;
+  margin: 0 0 35px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.modal__input {
+  display: flex;
+  border-bottom: 1px solid $black;
+  padding: 0;
+  height: 39px;
+  margin: 0 0 30px;
+  position: relative;
+
+  &--password {
+    margin: 0;
+  }
+}
+
+.modal__input label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 100%;
+  line-height: 34px;
+  transition: all 0.3s ease 0s;
+}
+
+.modal__input input {
+  color: $black;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.modal__input input {
+  &:focus,
+  &:focus-within {
+    ~ label {
+      transform: translateY(-115%);
+    }
+  }
+}
+
+.modal__input input {
+  &::placeholder {
+    opacity: 0;
+    color: transparent;
+  }
+
+  &:not(:placeholder-shown) {
+    ~ label {
+      visibility: hidden;
+    }
+  }
+}
+
+.modal input {
+  background: none;
+  border: none;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  background-image: url("../img/icons/close.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 80%;
+  border: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 28px;
+    height: 28px;
+    background-size: 50%;
+    top: 8px;
+    right: 8px;
+  }
+}

@@ -1,0 +1,126 @@
+.main-faq {
+  padding: 27px 0 55px;
+
+  @media (max-width: $tablet-width) {
+    padding: 22px 0 35px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 26px 0 23px;
+  }
+}
+
+.main-faq h2 {
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 28px 0 48px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 27px;
+  }
+}
+
+.main-faq h3 {
+  cursor: pointer;
+  font-family: $font-family--poppins;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 18px 0 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 0 0 7px;
+    margin: 18px 0 26px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 18px 0 12px;
+    padding: 0 38px 0 5px;
+  }
+}
+
+.main-faq p {
+  font-family: $font-family--poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 8px 0 10px;
+  padding: 0 10px 6px 8px;
+  max-width: 540px;
+
+  @media (max-width: $tablet-width) {
+    margin: 8px 0 19px;
+    max-width: 560px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 40px 0 4px;
+    margin: 8px 0 19px;
+  }
+}
+
+.main-faq__list {
+  padding: 0 calc(100 / 1366 * 100vw);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+  }
+}
+
+.main-faq__list li {
+  transition: height 0.5s ease 0s;
+  position: relative;
+  min-height: 112px;
+  border: 1px solid $brown;
+  padding: 25px 42px 24px;
+
+  @media (max-width: $tablet-width) {
+    padding: 25px 42px 19px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 20px 0 19px;
+    min-height: 82px;
+  }
+}
+
+.main-faq__list li:not(:last-child) {
+  border-bottom: none;
+}
+
+.main-faq__item-btn {
+  position: absolute;
+  top: 38px;
+  right: 36px;
+  width: 40px;
+  height: 35px;
+  border: none;
+  background: transparent url("../img/icons/arrow-top.svg") no-repeat;
+  background-position: center center;
+  transform: rotate(180deg);
+
+  @media (max-width: $tablet-width) {
+    background-size: cover;
+    top: 50px;
+    right: 50px;
+    padding: 0;
+    width: 23px;
+    height: 12px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 23px;
+    right: 23px;
+  }
+}

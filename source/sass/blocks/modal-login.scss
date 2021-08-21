@@ -1,0 +1,69 @@
+.modal-login__wrapper {
+  position: relative;
+  padding: 178px 45px 50px;
+  max-width: 430px;
+  margin: 20px auto;
+  background: $grey-background;
+  background-image: url("../img/backgrounds/login.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 138px;
+  box-shadow: 0 5px 32px $shadow;
+
+  @media (max-width: $mobile-width) {
+    max-width: 270px;
+    padding: 120px 15px 40px;
+    background-size: 100% 84px;
+  }
+}
+
+.modal-login__form {
+  font-family: $font-family--poppins;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-login__note {
+  font-size: 12px;
+  line-height: 18px;
+  color: $grey;
+  background: none;
+  border: none;
+  align-self: flex-end;
+  margin: 0 0 35px;
+  padding: 5px 10px;
+}
+
+.modal-login__log-in-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 21px;
+  color: $white;
+  background-color: $brown;
+  border: none;
+  min-height: 68px;
+  padding: 0 24px;
+  margin: 0 0 15px 0;
+}
+
+.modal-login__block-sign-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0 5px;
+  }
+}
+
+.modal-login__sign-up-btn {
+  background: none;
+  border: none;
+  color: $black;
+}

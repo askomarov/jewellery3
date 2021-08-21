@@ -1,0 +1,59 @@
+<header class="header">
+
+  <div class="header__wrapper">
+    <div class="header__user-menu container">
+      <button class="header__menu-button" type="button" aria-label="open/close menu">
+        <svg width="25" height="18">
+          <use href="./img/sprite_auto.svg#menu"></use>
+        </svg>
+      </button>
+
+      <a href="{{ mainPageHref }}" class="header__logo">
+        <svg width="66" height="66">
+          <use href="./img/sprite_auto.svg#logo"></use>
+        </svg>
+      </a>
+
+      <form class="header__form-search" action="https://echo.htmlacademy.ru/" method="get">
+        <button class="header__form-button" type="submit" aria-label="header search">
+          <svg width="14" height="14">
+            <use href="./img/sprite_auto.svg#lens"></use>
+          </svg>
+        </button>
+        <input class="header__search" name="header-search" placeholder="Type here to search" type="search" required>
+      </form>
+
+      <ul class="header__user-menu-list">
+        <li class="header__login header__login-desktop">
+          <a href="./modal-login.html">Login</a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="header__cart-desktop">Cart 0</span>
+            <svg class="header__cart-tablet" width="20" height="18">
+              <use href="./img/sprite_auto.svg#cart"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <nav class="header__nav header__nav-wrapper container">
+    <ul class="header__nav-list">
+      <li><a href="#">What's new</a></li>
+      <li><a href="./catalog.html">Chokers</a></li>
+      <li><a href="./catalog.html">Necklaces</a></li>
+      <li><a href="./catalog.html">Rings</a></li>
+      <li><a href="./catalog.html">Earrings</a></li>
+    </ul>
+    <ul class="header__list-tablet">
+      <li><a href="#">About CH</a></li>
+      <li><a href="#">Stores & Hours</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li class="header__login header__login-tablet"><a href="./modal-login.html">Login</a></li>
+    </ul>
+  </nav>
+</header>

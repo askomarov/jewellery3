@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="main-page" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="jewellery shop">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jewellery shop</title>
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" as="style" href="./css/style.min.css">
+  <link rel="preload" as="script" href="./js/main.js">
+</head>
+
+<body class="page-body">
+  <header class="header header--modal">
+    <div class="header__user-menu header__user-menu--modal-login">
+      <a href="./index.html" class="header__logo header__logo--modal-login " aria-label="go to Main page">
+        <svg width="66" height="66">
+          <use href="./img/sprite_auto.svg#logo"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <main class="main main--modal-login">
+    <section class="modal modal-login modal--no-js" aria-hidden="true">
+
+  <div class="modal-login__wrapper">
+    <h2>Log In</h2>
+    <form action="https://echo.htmlacademy.ru/" method="POST" class="modal-login__form">
+      <div class="modal__input">
+        <input id="email-modal" type="email" name="email" placeholder="email" required="">
+        <label for="email-modal">Your E-mail</label>
+      </div>
+      <div class="modal__input modal__input--password">
+        <input id="password-modal" type="password" autocomplete="current-password" placeholder="password" required="">
+        <label for="password-modal">Password</label>
+      </div>
+      <a href="#" class="modal-login__note">Forgot your password?</a>
+      <button class="modal-login__log-in-btn" type="submit">Log In</button>
+      <div class="modal-login__block-sign-up">
+        <p>Don't have an account?</p>
+        <a href="#" class="modal-login__sign-up-btn" id="sign-up-modal">Sign up</a>
+      </div>
+    </form>
+    <button class="modal__button-close" type="button" aria-label="close modal"></button>
+  </div>
+
+</section>
+
+  </main>
+  <footer class="footer">
+
+  <div class="footer__wrapper container">
+
+    <section class="footer__subscribe">
+      <h2>The good stuff in&nbsp;your inbox</h2>
+      <p>News and updates from CH. No spam, we promise.</p>
+      <form class="footer__subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
+        <!-- <label for="email">Your E-mail</label> -->
+        <input id="email" type="email" name="email" required="" placeholder="Your E-mail">
+
+        <button type="submit">
+          <span>Sign Up</span>
+          <svg width="29" height="10">
+            <use href="./img/sprite_auto.svg#arrow-left"></use>
+          </svg>
+        </button>
+      </form>
+    </section>
+
+    <section class="footer__nav">
+      <h2 class="visually-hidden">footer menu</h2>
+
+      <ul class="footer__order-list">
+        <li><a href="#">Ordering & Payment</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Returns & Exchanges</a></li>
+        <li><a href="#">Delivery</a></li>
+      </ul>
+
+      <ul class="footer__about-list">
+        <li><a href="#">About CH</a></li>
+        <li><a href="#">Stores & Hours</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <ul class="footer__socials-list socials-list">
+        <li>
+          <a href="#">
+            <span class="socials-list__icon-wrap">
+              <svg class="socials-list__icon socials-list__icon--facebook" width="8" height="15">
+                <use href="./img/sprite_auto.svg#facebook"></use>
+              </svg>
+            </span>
+            <span class="socials-list__link-text">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="socials-list__icon-wrap">
+              <svg class="socials-list__icon socials-list__icon--instagram" width="15" height="15">
+                <use href="./img/sprite_auto.svg#instagram"></use>
+              </svg>
+            </span>
+            <span class="socials-list__link-text">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href=" #">
+            <span class="socials-list__icon-wrap">
+              <svg class="socials-list__icon socials-list__icon--pinterest" width="15" height="15">
+                <use href="./img/sprite_auto.svg#pinterest"></use>
+              </svg>
+            </span>
+            <span class="socials-list__link-text">Pinterest</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="socials-list__icon-wrap">
+              <svg class="socials-list__icon socials-list__icon--twitter" width="15" height="13">
+                <use href="./img/sprite_auto.svg#twitter"></use>
+              </svg>
+            </span>
+            <span class="socials-list__link-text">Twitter</span>
+          </a>
+        </li>
+      </ul>
+
+    </section>
+  </div>
+
+</footer>
+
+</body>
+
+</html>

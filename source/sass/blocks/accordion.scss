@@ -1,0 +1,24 @@
+.accordion__item p {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+}
+
+.accordion__item--opened p {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.accordion__item .accordion__filter-list {
+  display: none;
+}
+
+.accordion__item--opened .accordion__toggler {
+  transform: rotate(0);
+}
+
+.accordion__item--opened .accordion__filter-list {
+  display: block;
+}

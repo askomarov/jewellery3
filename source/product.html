@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="main-page" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="jewellery shop">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jewellery shop</title>
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/cormorant-garamond-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="style" href="./css/style.min.css" />
+  <link rel="preload" as="script" href="./js/main.js" />
+</head>
+
+<body class="page-body">
+
+  <include src="source/html/header.html">
+    {
+    "mainPageHref":"main.html"
+    }</include>
+
+  <main class="main product">
+    <h1 class="visually-hidden">Product card</h1>
+    <section class="product__card card container">
+      <h2 class="visually-hidden">Review</h2>
+      <section class="card__preview">
+        <h3 class="visually-hidden">Product preview</h3>
+        <ul class="card__list-preview">
+          <li>
+            <a href="#">
+              <picture>
+                <!-- 1x: 100 ; 2x: 200 -->
+                <source type="image/webp"
+                  srcset="./img/review-product/gold-necklace-women.webp 1x, ./img/review-product/gold-necklace-women@2x.webp 2x">
+                <img loading="lazy" src="./img/review-product/gold-necklace-women.jpg"
+                  srcset="./img/review-product/gold-necklace-women@2x.jpg" width="100" height="125"
+                  alt="Gold necklace for women">
+              </picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <picture>
+                <!-- 1x: 100 ; 2x: 200 -->
+                <source type="image/webp"
+                  srcset="./img/review-product/pretty-gold-necklace.webp 1x, ./img/review-product/pretty-gold-necklace@2x.webp 2x">
+                <img loading="lazy" src="./img/review-product/pretty-gold-necklace.jpg"
+                  srcset="./img/review-product/pretty-gold-necklace@2x.jpg" width="100" height="125"
+                  alt="Pretty gold necklace">
+              </picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <picture>
+                <!-- 1x: 100 ; 2x: 200 -->
+                <source type="image/webp"
+                  srcset="./img/review-product/womens-necklace-set.webp 1x, ./img/review-product/womens-necklace-set@2x.webp 2x">
+                <img loading="lazy" src="./img/review-product/womens-necklace-set.jpg"
+                  srcset="./img/review-product/womens-necklace-set@2x.jpg" width="100" height="125"
+                  alt="Women's necklace set">
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card__review">
+        <h3 class="visually-hidden">Product review</h3>
+        <a href="#">
+          <figure>
+            <picture>
+              <!-- 1x: 470 ; 2x: 940 -->
+              <source type="image/webp"
+                srcset="./img/review-product/necklace-detail.webp 1x, ./img/review-product/necklace-detail@2x.webp 2x">
+              <img loading="lazy" src="./img/review-product/necklace-detail.jpg"
+                srcset="./img/review-product/necklace-detail@2x.jpg" width="470" height="435" alt="Necklace detail">
+            </picture>
+          </figure>
+        </a>
+      </section>
+
+      <section class="card__description">
+        <h3>Gold Necklace</h3>
+        <p>$ 115</p>
+        <ul class="card__product-menu">
+          <li><a class="card__link-menu card__link-menu--current" href="#">Desctiption</a></li>
+          <li><a class="card__link-menu" href="#">Additional info</a></li>
+        </ul>
+        <dl class="card__desc">
+          <div>
+            <dt>Metal type</dt>
+            <dd>Gold 585</dd>
+          </div>
+          <div>
+            <dt>Stone</dt>
+            <dd>Turquoise</dd>
+          </div>
+          <div>
+            <dt>Size</dt>
+            <dd>18" /20"</dd>
+          </div>
+        </dl>
+        <button class="card__add" type="button">Add to card</button>
+        <ul class="card__list-features">
+          <li>14 Day Returns</li>
+          <li>2-Year Warranty</li>
+          <li>Free Shipping</li>
+        </ul>
+      </section>
+    </section>
+
+    <include src="source/html/slider.html">
+      {
+      "sliderTitle":"You May Also Like",
+      "className":"product__slider"
+      }</include>
+  </main>
+
+  <include src="source/html/footer.html"></include>
+
+  <include src="source/html/modal-login.html">
+    {
+    "className":""
+    }
+  </include>
+  <include src="source/html/modal-card.html"></include>
+
+
+  <script src="./js/vendor.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

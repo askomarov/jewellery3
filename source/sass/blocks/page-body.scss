@@ -1,0 +1,34 @@
+.page-body {
+  font-family: $font-family--poppins;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  width: 100%;
+  min-height: 100%;
+  color: $black;
+  &.lock {
+    overflow-y: hidden;
+  }
+}
+
+.page-body h2 {
+  font-family: $font-family--cormorant;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.page-body__section-link {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid $brown;
+
+
+  @media (hover: hover) {
+    &:hover {
+      color: $grey;
+      border-color: $black;
+    }
+  }
+}

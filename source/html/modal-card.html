@@ -1,0 +1,52 @@
+<section class="modal modal-card modal--no-js" aria-hidden="true">
+  <div class="modal-card__wrapper">
+
+    <h2>The item was added to your cart</h2>
+    <div class="modal-card__center modal-card__center--border modal-card__direction">
+      <div class="modal-card__direction">
+        <div class="modal-card__img">
+          <a href="#">
+            <picture>
+              <!-- 1x: 84 ; 2x: 168 -->
+              <source type="image/webp"
+                srcset="./img/review-product/necklace-detail.webp 1x, ./img/review-product/necklace-detail@2x.webp 2x">
+              <img loading="lazy" src="./img/review-product/necklace-detail.jpg"
+                srcset="./img/review-product/necklace-detail@2x.jpg" width="84" height="79" alt="Necklace detail">
+            </picture>
+          </a>
+        </div>
+        <div class="modal-card__description">
+          <p>Gold Necklace</p>
+          <p>$ 115</p>
+        </div>
+      </div>
+      <div class="modal-card__addition">
+        <button class="modal-card__button-plus" type="button" aria-label="Add item">
+          <svg width="14" height="14">
+            <use href="./img/sprite_auto.svg#plus"></use>
+          </svg>
+        </button>
+        <p>1</p>
+        <button class="modal-card__button-minus" type="button" aria-label="Remove item">
+          <svg width="14" height="14">
+            <use href="./img/sprite_auto.svg#minus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="modal-card__center">
+      <div class="modal-card__info modal-card__direction">
+        <p>You have <span>1 </span>item in the cart</p>
+        <p>Cart subtotal: <span>$ 115</span></p>
+      </div>
+      <div class="modal-card__buttons modal-card__direction">
+        <a href="catalog.html" class="modal-card__button modal-card__button--continue">Continue
+          shopping</a>
+        <a href="#" class="modal-card__button modal-card__button--checkout">Checkout</a>
+      </div>
+    </div>
+    <button class="modal-card__button-close modal__button-close" type="button" aria-label="close modal"></button>
+
+  </div>
+</section>
