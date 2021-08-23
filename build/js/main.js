@@ -15,12 +15,10 @@ const lockBody = (lockPad) => {
   let paddingValue = `${lockPad}px`;
   body.classList.add('lock');
   body.style.paddingRight = `${paddingValue}`;
-  // header.style.setProperty('--lock-pad', `${paddingValue}`);
 };
 
 const unlockBody = () => {
   body.classList.remove('lock');
-  // header.style.removeProperty('--lock-pad');
   body.style.paddingRight = '';
 };
 
@@ -64,6 +62,17 @@ const initSwiperSlider = () => {
           },
         },
         1024: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            renderBullet: function (index, className) {
+              return `<span class="${className}">${index + 1}</span>`;
+            },
+          },
+        },
+        1200: {
           slidesPerView: 4,
           slidesPerGroup: 4,
           pagination: {
@@ -79,7 +88,35 @@ const initSwiperSlider = () => {
   }
 };
 
-// accordion
+const mobileProductPreviewSlider = () => {
+  let productSliderNoJs = document.querySelector('.card__list-preview--no-js ');
+  let previewSliderSwiper = document.querySelector('.swiper-preview__list');
+  if (productSliderNoJs && previewSliderSwiper) {
+    previewSliderSwiper.querySelectorAll('li').forEach(li => {
+      li.classList.add('swiper-slide');
+    });
+
+    productSliderNoJs.classList.remove('card__list-preview--no-js');
+
+    const swiperPreview = new Swiper('.swiper-preview', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      // slidesPerGroup: 1,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+          return `<span class="${currentClass}"></span> of
+                    <span class="${totalClass}"></span>`;
+        },
+      },
+    });
+  }
+};
+
+
 const initAccordion = () => {
   const accordion = document.querySelector('.accordion');
   if (accordion) {
@@ -116,7 +153,6 @@ const initAccordion = () => {
   };
 }
 
-// Menu mobile
 const initHeaderMenu = () => {
   const pageHeader = document.querySelector('.header');
   const headerToggle = document.querySelector('.header__menu-button');
@@ -141,7 +177,6 @@ const initHeaderMenu = () => {
 
 };
 
-// Filter
 const initOpenFilterMemu = () => {
   const filter = document.querySelector('.filter');
   if (filter) {
@@ -160,7 +195,6 @@ const initOpenFilterMemu = () => {
   }
 };
 
-// modal login
 const initModalLogin = () => {
   const modalLogin = document.querySelector('.modal-login');
   const buttonsOpenModalLogin = document.querySelectorAll('.header__login');
@@ -235,7 +269,7 @@ const initModalLogin = () => {
     });
   }
 };
-// modal Card
+
 const initModalCard = () => {
   const modalCard = document.querySelector('.modal-card');
   const buttonOpenModalCard = document.querySelector('.card__add');
@@ -295,21 +329,28 @@ const initModalCard = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  // бургер меню
+
   initHeaderMenu();
 
-  // слайдер
   initSwiperSlider();
 
-  // open catalog filter
   initOpenFilterMemu();
 
-  // модальное окно добавление в корзину
   initModalCard();
 
-  // модальное окно логин
   initModalLogin();
 
-  // аккордион
   initAccordion();
+
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    /* the viewport is at least 768 pixels wide */
+    console.log('destroy');
+
+    swiperPreview.destroy(true, true);
+  } else {
+    /* the viewport is less than 768 pixels wide */
+    console.log('turn on');
+
+    mobileProductPreviewSlider();
+  }
 });

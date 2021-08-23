@@ -24,10 +24,10 @@
     <h1 class="visually-hidden">Product card</h1>
     <section class="product__card card container">
       <h2 class="visually-hidden">Review</h2>
-      <section class="card__preview">
+      <section class="card__preview swiper-container swiper-preview">
         <h3 class="visually-hidden">Product preview</h3>
-        <ul class="card__list-preview">
-          <li>
+        <ul class="card__list-preview swiper-wrapper swiper-preview__list card__list-preview--no-js">
+          <li class="">
             <a href="#">
               <picture>
                 <!-- 1x: 100 ; 2x: 200 -->
@@ -39,7 +39,7 @@
               </picture>
             </a>
           </li>
-          <li>
+          <li class="">
             <a href="#">
               <picture>
                 <!-- 1x: 100 ; 2x: 200 -->
@@ -51,7 +51,7 @@
               </picture>
             </a>
           </li>
-          <li>
+          <li class="">
             <a href="#">
               <picture>
                 <!-- 1x: 100 ; 2x: 200 -->
@@ -63,7 +63,19 @@
               </picture>
             </a>
           </li>
+          <li class="card__list-preview--mobile-img ">
+            <a href="#">
+              <picture>
+                <!-- 1x: 100 ; 2x: 200 -->
+                <source type="image/webp"
+                  srcset="./img/review-product/necklace-detail.webp 1x, ./img/review-product/necklace-detail@2x.webp 2x">
+                <img loading="lazy" src="./img/review-product/necklace-detail.jpg"
+                  srcset="./img/review-product/necklace-detail@2x.jpg" width="100" height="125" alt="Necklace detail">
+              </picture>
+            </a>
+          </li>
         </ul>
+        <div class="swiper-pagination swiper-preview__pagination"></div>
       </section>
 
       <section class="card__review">
@@ -88,7 +100,21 @@
           <li><a class="card__link-menu card__link-menu--current" href="#">Desctiption</a></li>
           <li><a class="card__link-menu" href="#">Additional info</a></li>
         </ul>
-        <dl class="card__desc">
+        <dl class="card__desc card__desc--shown">
+          <div>
+            <dt>Metal type</dt>
+            <dd>Gold 585</dd>
+          </div>
+          <div>
+            <dt>Stone</dt>
+            <dd>Turquoise</dd>
+          </div>
+          <div>
+            <dt>Size</dt>
+            <dd>18" /20"</dd>
+          </div>
+        </dl>
+        <dl class="card__desc card__desc--hidden">
           <div>
             <dt>Metal type</dt>
             <dd>Gold 585</dd>

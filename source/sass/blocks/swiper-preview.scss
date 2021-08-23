@@ -1,0 +1,15 @@
+.swiper-preview {
+  position: relative;
+}
+.swiper-preview__list {
+  position: relative;
+  z-index: 1;
+}
+
+.swiper-preview__pagination {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}

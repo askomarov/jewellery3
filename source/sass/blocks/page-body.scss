@@ -1,8 +1,9 @@
 .page-body {
   font-family: $font-family--poppins;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
   width: 100%;
   min-height: 100%;
   color: $black;
@@ -23,7 +24,6 @@
   text-decoration: none;
   color: inherit;
   border-bottom: 1px solid $brown;
-
 
   @media (hover: hover) {
     &:hover {

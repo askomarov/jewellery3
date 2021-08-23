@@ -1,15 +1,18 @@
 const gulp = require('gulp');
+const path = require('path');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const server = require('browser-sync').create();
+const stripCssComments = require('gulp-strip-css-comments');
 const csso = require('gulp-csso');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
+const htmlmin = require('gulp-htmlmin');
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
 const del = require('del');
@@ -22,6 +25,7 @@ gulp.task("deploy", (cb) => {
 });
 
 gulp.task('css', () => gulp.src('source/sass/style.scss')
+  .pipe(stripCssComments(false))
   .pipe(plumber())
   .pipe(sourcemap.init())
   .pipe(sass())
@@ -75,6 +79,9 @@ gulp.task('sprite', () => gulp.src('source/img/icons/*.svg')
   .pipe(gulp.dest('build/img')));
 
 gulp.task('html', () => gulp.src('source/*.html')
+  .pipe(htmlmin({
+    removeComments: true
+  }))
   .pipe(posthtml([
     include(),
   ]))

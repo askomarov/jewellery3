@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="jewellery shop">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>jewellery shop</title>
   <link rel="stylesheet" href="./css/normalize.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
@@ -80,37 +80,47 @@
     <h1 class="visually-hidden">Product card</h1>
     <section class="product__card card container">
       <h2 class="visually-hidden">Review</h2>
-      <section class="card__preview">
+      <section class="card__preview swiper-container swiper-preview">
         <h3 class="visually-hidden">Product preview</h3>
-        <ul class="card__list-preview">
-          <li>
+        <ul class="card__list-preview swiper-wrapper swiper-preview__list card__list-preview--no-js">
+          <li class="">
             <a href="#">
               <picture>
-                <!-- 1x: 100 ; 2x: 200 -->
-                <source type="image/webp" srcset="./img/review-product/gold-necklace-women.webp 1x, ./img/review-product/gold-necklace-women@2x.webp 2x">
+                
+                <source type="image/webp" srcset="./img/review-product/gold-necklace-women.webp, ./img/review-product/gold-necklace-women@2x.webp 2x">
                 <img loading="lazy" src="./img/review-product/gold-necklace-women.jpg" srcset="./img/review-product/gold-necklace-women@2x.jpg" width="100" height="125" alt="Gold necklace for women">
               </picture>
             </a>
           </li>
-          <li>
+          <li class="">
             <a href="#">
               <picture>
-                <!-- 1x: 100 ; 2x: 200 -->
-                <source type="image/webp" srcset="./img/review-product/pretty-gold-necklace.webp 1x, ./img/review-product/pretty-gold-necklace@2x.webp 2x">
+                
+                <source type="image/webp" srcset="./img/review-product/pretty-gold-necklace.webp, ./img/review-product/pretty-gold-necklace@2x.webp 2x">
                 <img loading="lazy" src="./img/review-product/pretty-gold-necklace.jpg" srcset="./img/review-product/pretty-gold-necklace@2x.jpg" width="100" height="125" alt="Pretty gold necklace">
               </picture>
             </a>
           </li>
-          <li>
+          <li class="">
             <a href="#">
               <picture>
-                <!-- 1x: 100 ; 2x: 200 -->
-                <source type="image/webp" srcset="./img/review-product/womens-necklace-set.webp 1x, ./img/review-product/womens-necklace-set@2x.webp 2x">
+                
+                <source type="image/webp" srcset="./img/review-product/womens-necklace-set.webp, ./img/review-product/womens-necklace-set@2x.webp 2x">
                 <img loading="lazy" src="./img/review-product/womens-necklace-set.jpg" srcset="./img/review-product/womens-necklace-set@2x.jpg" width="100" height="125" alt="Women's necklace set">
               </picture>
             </a>
           </li>
+          <li class="card__list-preview--mobile-img">
+            <a href="#">
+              <picture>
+                
+                <source type="image/webp" srcset="./img/review-product/necklace-detail.webp, ./img/review-product/necklace-detail@2x.webp 2x">
+                <img loading="lazy" src="./img/review-product/necklace-detail.jpg" srcset="./img/review-product/necklace-detail@2x.jpg" width="100" height="125" alt="Necklace detail">
+              </picture>
+            </a>
+          </li>
         </ul>
+        <div class="swiper-pagination swiper-preview__pagination"></div>
       </section>
 
       <section class="card__review">
@@ -118,8 +128,8 @@
         <a href="#">
           <figure>
             <picture>
-              <!-- 1x: 470 ; 2x: 940 -->
-              <source type="image/webp" srcset="./img/review-product/necklace-detail.webp 1x, ./img/review-product/necklace-detail@2x.webp 2x">
+              
+              <source type="image/webp" srcset="./img/review-product/necklace-detail.webp, ./img/review-product/necklace-detail@2x.webp 2x">
               <img loading="lazy" src="./img/review-product/necklace-detail.jpg" srcset="./img/review-product/necklace-detail@2x.jpg" width="470" height="435" alt="Necklace detail">
             </picture>
           </figure>
@@ -133,7 +143,21 @@
           <li><a class="card__link-menu card__link-menu--current" href="#">Desctiption</a></li>
           <li><a class="card__link-menu" href="#">Additional info</a></li>
         </ul>
-        <dl class="card__desc">
+        <dl class="card__desc card__desc--shown">
+          <div>
+            <dt>Metal type</dt>
+            <dd>Gold 585</dd>
+          </div>
+          <div>
+            <dt>Stone</dt>
+            <dd>Turquoise</dd>
+          </div>
+          <div>
+            <dt>Size</dt>
+            <dd>18" /20"</dd>
+          </div>
+        </dl>
+        <dl class="card__desc card__desc--hidden">
           <div>
             <dt>Metal type</dt>
             <dd>Gold 585</dd>
