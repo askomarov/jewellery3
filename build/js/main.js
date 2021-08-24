@@ -101,7 +101,6 @@ const mobileProductPreviewSlider = () => {
     const swiperPreview = new Swiper('.swiper-preview', {
       slidesPerView: 1,
       spaceBetween: 30,
-      // slidesPerGroup: 1,
       loop: true,
       pagination: {
         el: '.swiper-pagination',
@@ -345,12 +344,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.matchMedia("(min-width: 768px)").matches) {
     /* the viewport is at least 768 pixels wide */
     console.log('destroy');
-
     swiperPreview.destroy(true, true);
   } else {
     /* the viewport is less than 768 pixels wide */
     console.log('turn on');
-
     mobileProductPreviewSlider();
   }
 });
