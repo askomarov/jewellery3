@@ -87,6 +87,7 @@ const initSwiperSlider = () => {
     });
   }
 };
+let swiperPreview;
 
 const mobileProductPreviewSlider = () => {
   let productSliderNoJs = document.querySelector('.card__list-preview--no-js ');
@@ -98,10 +99,9 @@ const mobileProductPreviewSlider = () => {
 
     productSliderNoJs.classList.remove('card__list-preview--no-js');
 
-    const swiperPreview = new Swiper('.swiper-preview', {
+    swiperPreview = new Swiper('.swiper-preview', {
       slidesPerView: 1,
       spaceBetween: 30,
-      // slidesPerGroup: 1,
       loop: true,
       pagination: {
         el: '.swiper-pagination',
@@ -283,10 +283,6 @@ const initModalCard = () => {
       document.removeEventListener('click', onClickAwayCloseModal);
     };
 
-    const onBtnCloseModal = (btnClose) => {
-      btnClose.addEventListener('click', closeModal)
-    };
-
     const onEscKeydownCloseModal = (evt) => {
       if (isEscEvent(evt)) {
         evt.preventDefault();
@@ -295,7 +291,7 @@ const initModalCard = () => {
     };
 
     const onClickAwayCloseModal = (evt) => {
-      if (!evt.target.closest('.modal-login__wrapper')) {
+      if (!evt.target.closest('.modal-card__wrapper')) {
         closeModal();
       }
     };
@@ -313,7 +309,8 @@ const initModalCard = () => {
       lockBody(bodyLockPadding);
 
       const btnClose = modalCard.querySelector('.modal__button-close');
-      onBtnCloseModal(btnClose);
+      btnClose.focus();
+      btnClose.addEventListener('click', closeModal, { once: true })
       addListenerOnOpenModal();
     };
 
@@ -344,13 +341,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (window.matchMedia("(min-width: 768px)").matches) {
     /* the viewport is at least 768 pixels wide */
-    console.log('destroy');
-
-    swiperPreview.destroy(true, true);
+    if (swiperPreview) {
+      swiperPreview.destroy(true, true);
+    }
   } else {
     /* the viewport is less than 768 pixels wide */
-    console.log('turn on');
-
     mobileProductPreviewSlider();
   }
 });
