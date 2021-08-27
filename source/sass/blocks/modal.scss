@@ -9,6 +9,7 @@
   bottom: 0;
   transform: translateY(50px);
   transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+  overflow-y: auto;
 }
 
 .modal--no-js {
@@ -38,7 +39,6 @@
     text-decoration: none;
   }
 }
-
 
 .modal h2 {
   text-align: center;
@@ -125,7 +125,11 @@
   &:hover {
     opacity: 0.6;
   }
-
+  &:focus,
+  &:focus-within {
+    outline: 1px solid black;
+  }
+  
   &:active {
     opacity: 1;
   }

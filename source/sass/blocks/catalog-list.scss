@@ -28,11 +28,12 @@
   height: auto;
 
   @media (max-width: $tablet-width) {
-    height: 208px;
+    // height: 208px;
+    aspect-ratio: 1/1;
   }
 
   @media (max-width: $mobile-width) {
-    height: 136px;
+    // height: 136px;
   }
 }
 

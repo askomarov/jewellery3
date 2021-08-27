@@ -75,6 +75,8 @@
 
   @media (max-width: $mobile-width) {
     grid-area: initial;
+    width: 290px;
+    margin: 0 auto;
   }
 }
 
@@ -141,7 +143,7 @@
   }
 }
 
-.card__list-preview--mobile-img {
+.card__list-preview-mobile-img {
   display: none;
 
   @media (max-width: $mobile-width) {
