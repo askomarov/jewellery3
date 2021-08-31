@@ -214,11 +214,11 @@
   }
 }
 
-.slider__item {
-  @media (max-width: $mobile-width) {
-    height: 136px;
-  }
-}
+// .slider__item {
+//   @media (max-width: $mobile-width) {
+//     height: 136px;
+//   }
+// }
 
 .slider__item a {
   text-decoration: none;
@@ -252,11 +252,10 @@
     // width: calc(320 / 768 * 100vw);
     // min-width: 130px;
     // height: 136px;
-    position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    height: auto;
+    min-height: 136px;
+    aspect-ratio: 1/1;
   }
 }
 
